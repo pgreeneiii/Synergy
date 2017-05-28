@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   resources :conversations, only: [:index, :show, :destroy]
 
+  resources :messages, only: [:new, :create]
+
   get("/sign-up", {:controller => "devise", :action => "new" })
 
 end
